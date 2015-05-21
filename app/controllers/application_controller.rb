@@ -5,13 +5,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :authenticate_user!
   before_filter :set_locale
 
   protected
 
   def authenticate_user_editor!
     authenticate_user!
-    redirect_to root_path, alert: 'Somente editores ou administradores podem acessar' unless current_user.admin? && current_user.editor?
+    redirect_to root_path, alert: 'Somente editores ou administradores podem acessar' unless current_user.admin? || current_user.editor?
   end
 
   def authenticate_user_admin!

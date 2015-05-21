@@ -1,0 +1,30 @@
+en:
+  helpers:
+    "yes": "Yes"
+    "no": "No"
+  layout:
+    posts: Publicações
+    users: Usuários
+  crud:
+    new: New
+    show: Show
+    edit: Edit
+    destroy: Destroy
+    confirm: Are you sure?
+    back: Back
+    created_at: Created At
+  posts:
+    index:
+      listing: Listing Posts
+    edit:
+      editing: Editing Post
+    new:
+      new: New Post
+    show:
+      visualize: Vizualize Post
+  users:
+    edit_role: Change Role
+    show:
+      user: User
+    index:
+      listing_users: Listing Users

@@ -26,6 +26,8 @@ pt-BR:
         title: Registrar
         submit: Registrar
     sessions:
+      login: Entrar
+      logout: Sair
       new:
         title: Login
         submit: Login

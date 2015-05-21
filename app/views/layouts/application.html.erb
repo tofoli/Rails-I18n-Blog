@@ -12,10 +12,11 @@
   <div class="container">
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to('Users', users_path) %></li>
+        <li><%= link_to(t('layout.users'), users_path) %></li>
+        <li><%= link_to(t('layout.posts'), posts_path) %></li>
 
       </ul>
-      <%= render 'devise/menu/login_items' if controller_name != 'sessions' %>
+      <%= render 'devise/menu/login_items' %>
     </div><!--/.nav-collapse -->
   </div>
 </nav>

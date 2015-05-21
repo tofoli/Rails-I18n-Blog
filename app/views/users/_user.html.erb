@@ -4,9 +4,9 @@
 <td>
   <%= form_for(user) do |f| %>
     <%= f.select(:role, Role.all.map {|role| [role.name.titleize,role.name]}, selected: user.role.name ) %>
-    <%= f.submit 'Change Role', :class => 'button-xs' %>
+    <%= f.submit t('users.edit_role'), class: 'button-xs' %>
   <% end %>
 </td>
 <td>
-  <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
+  <%= link_to(t('crud.destroy'), user_path(user), :data => { :confirm => t('crud.confirm') }, :method => :delete, :class => 'button-xs') unless user == current_user %>
 </td>

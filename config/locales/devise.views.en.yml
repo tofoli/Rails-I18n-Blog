@@ -26,6 +26,8 @@ en:
         title: Sign up
         submit: Sign up
     sessions:
+      login: Login
+      logout: Logout
       new:
         title: Sign in
         submit: Sign in

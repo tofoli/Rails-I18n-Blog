@@ -1,0 +1,31 @@
+pt-BR:
+  helpers:
+    "yes": Sim
+    "no": Não
+  layout:
+    posts: Publicações
+    users: Usuários
+  crud:
+    new: Novo
+    show: Visualizar
+    edit: Editar
+    destroy: Excluir
+    confirm: Você tem certeza?
+    back: Voltar
+    created_at: Criando Em
+  posts:
+    index:
+      listing: Lista de Publicações
+    edit:
+      editing: Editando Publicação
+    new:
+      new: Nova Publicação
+    show:
+      visualize: Vizualizar Publicação
+  users:
+    edit_role: Alterar Papel
+    show:
+      user: Usuário
+    index:
+      listing_users: Lista de Usuários
+

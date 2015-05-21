@@ -2,11 +2,23 @@
 pt-BR:
   activerecord:
     models:
-      user: "Usuário"
+      user: Usuário
+      role: Papel
+      post: Publicação
     attributes:
       user:
-        email: "E-mail"
-        password: "Senha"
-        password_confirmation: "Confirmar Senha"
-        current_password: "Senha Atual"
-        remember_me: "Lembre-se de mim"
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmar Senha
+        current_password: Senha Atual
+        remember_me: Lembre-se de mim
+        role: Papel
+      role:
+        name: Nome
+      post:
+        title: Titulo
+        summary: Resumo
+        content: Conteúdo
+        active: Ativo
+        user: Usuário
+        created_at: Criando Em
