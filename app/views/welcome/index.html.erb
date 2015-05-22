@@ -2,5 +2,6 @@
   <%= render partial: 'welcome/post', locals: { post: post } %>
 <% end %>
 
-<%= paginate @posts %>
-<%= page_entries_info @posts %>
+<div class="text-center">
+    <%= paginate @posts %>
+</div>
