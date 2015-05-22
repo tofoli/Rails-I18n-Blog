@@ -5,6 +5,8 @@ pt-BR:
   layout:
     posts: Publicações
     users: Usuários
+    admin: Administrativo
+    search: Pesquisar
   crud:
     new: Novo
     show: Visualizar
@@ -28,4 +30,9 @@ pt-BR:
       user: Usuário
     index:
       listing_users: Lista de Usuários
+  welcome:
+    index:
+      posted_by: Postado por
+      "on": em
+      learn_more: Saiba Mais...
 

@@ -10,18 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require _bootstrap-sprockets
- *= require _bootstrap
  *= require_tree .
  *= require_self
  */
 
-ul.hmenu {
-    list-style: none;
-    margin: 0 0 2em;
-    padding: 0;
-}
-
-ul.hmenu li {
-    display: inline;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";

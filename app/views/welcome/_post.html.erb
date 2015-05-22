@@ -1,0 +1,23 @@
+<div class="pull-right" style="margin-top: 10px">
+<p>
+  <%= t('welcome.index.posted_by') %>   <%= post.user.email %>
+  <%= t('welcome.index.on') %>   <%= l(post.updated_at) %>
+</p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h1 class="panel-title"><%= post.title %></h1>
+    <div class="pull-right">
+
+    </div>
+  </div>
+  <div class="panel-body">
+    <%= post.summary %>
+  </div>
+  <div class="clearfix">
+    <div class="pull-right">
+      <%= link_to t('welcome.index.learn_more'), post %>
+    </div>
+  </div>
+</div>

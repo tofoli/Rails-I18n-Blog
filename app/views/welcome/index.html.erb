@@ -1,13 +1,6 @@
-<dl>
-  <dt>Number to Currency</dt>
-  <dd><%= number_to_currency(123.56) %></dd>
+<% @posts.each do |post| %>
+  <%= render partial: 'welcome/post', locals: { post: post } %>
+<% end %>
 
-  <dt>Number to Human</dt>
-  <dd><%= number_to_human(100_555_123.15) %></dd>
-
-  <dt>Date</dt>
-  <dd><%=l Time.current, format: :long %></dd>
-
-  <dt>Time</dt>
-  <dd><%= distance_of_time_in_words(1.hour + 20.minutes) %></dd>
-</dl>
+<%= paginate @posts %>
+<%= page_entries_info @posts %>

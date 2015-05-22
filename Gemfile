@@ -35,7 +35,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # http://www.rubydoc.info/github/plataformatec/devise/
 gem 'devise'
 
+# https://github.com/twbs/bootstrap
 gem 'bootstrap-sass'
+
+# https://github.com/amatsuda/kaminari
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

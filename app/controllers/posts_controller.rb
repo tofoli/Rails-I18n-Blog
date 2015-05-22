@@ -71,7 +71,10 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params[:post][:user_id] = current_user.id
-      params.require(:post).permit(:title, :summary, :content, :user_id, :active)
+      params[:post][:user_id] = current_user.id if action_name == ''
+      permit = [:title, :summary, :content, :user_id]
+      permit << :active if current_user.admin?
+
+      params.require(:post).permit(*permit)
     end
 end
