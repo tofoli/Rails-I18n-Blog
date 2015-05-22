@@ -20,9 +20,9 @@
         <td><%= l(post.created_at) %></td>
         <td><%= human_boolean(post.active) %></td>
         <td><%= post.user.email %></td>
-        <td><%= link_to t('crud.show'), post %></td>
-        <td><%= link_to t('crud.edit'), edit_post_path(post) %></td>
-        <td><%= link_to t('crud.destroy'), post, method: :delete, data: { confirm: t('crud.confirm') } %></td>
+        <td><%= link_to t('crud.show'), admin_post_path(post), class: 'btn btn-success' %></td>
+        <td><%= link_to t('crud.edit'), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
+        <td><%= link_to t('crud.destroy'), admin_post_path(post), method: :delete, data: { confirm: t('crud.confirm') }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to t('crud.new'), new_post_path %>
+<%= link_to t('crud.new'), new_admin_post_path, class: 'btn btn-default' %>

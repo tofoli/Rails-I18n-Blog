@@ -15,21 +15,35 @@ en:
     confirm: Are you sure?
     back: Back
     created_at: Created At
-  posts:
-    index:
-      listing: Listing Posts
-    edit:
-      editing: Editing Post
-    new:
-      new: New Post
-    show:
-      visualize: Vizualize Post
-  users:
-    edit_role: Change Role
-    show:
-      user: User
-    index:
-      listing_users: Listing Users
+  admin:
+    posts:
+      index:
+        listing: Listing Posts
+      edit:
+        editing: Editing Post
+      new:
+        new: New Post
+      show:
+        visualize: Vizualize Post
+      create:
+        success: Post was successfully created.
+      update:
+        success: Post was successfully updated.
+      destroy:
+        success: Post was successfully destroyed.
+    users:
+      edit_role: Change Role
+      show:
+        user: User
+      index:
+        listing_users: Listing Users
+      update:
+        success: User was successfully updated.
+        error: Unable to update user.
+      destroy:
+        success: User was successfully destroyed.
+      show:
+        access_denied: Access denied.
   welcome:
     index:
       posted_by: Posted By

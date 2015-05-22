@@ -1,3 +1,5 @@
 <h3><%= t('.user') %></h3>
 <p><%= t('activerecord.attributes.post.user') %>: <%= @user.email %></p>
 <p><%= t('activerecord.attributes.post.role') %>: <%= @user.role.name.titleize %></p>
+
+<%= link_to t('crud.back'), admin_users_path, class: 'btn btn-default' %>

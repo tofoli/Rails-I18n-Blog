@@ -1,0 +1,8 @@
+<h1><%= t('.editing') %></h1>
+
+<%= render 'form' %>
+
+<div style="margin-top: 10px">
+    <%= link_to t('crud.show'), admin_post_path(@post), class: 'btn btn-primary' %>
+    <%= link_to t('crud.back'), admin_posts_path, class: 'btn btn-default' %>
+</div>

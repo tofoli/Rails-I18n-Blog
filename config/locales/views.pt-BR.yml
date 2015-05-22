@@ -15,21 +15,35 @@ pt-BR:
     confirm: Você tem certeza?
     back: Voltar
     created_at: Criando Em
-  posts:
-    index:
-      listing: Lista de Publicações
-    edit:
-      editing: Editando Publicação
-    new:
-      new: Nova Publicação
-    show:
-      visualize: Vizualizar Publicação
-  users:
-    edit_role: Alterar Papel
-    show:
-      user: Usuário
-    index:
-      listing_users: Lista de Usuários
+  admin:
+    posts:
+      index:
+        listing: Lista de Publicações
+      edit:
+        editing: Editando Publicação
+      new:
+        new: Nova Publicação
+      show:
+        visualize: Vizualizar Publicação
+      create:
+        success: Publicação foi criada com sucesso.
+      update:
+        success: Publicação foi atualizado com sucesso.
+      destroy:
+        success: Publicação foi excluida com sucesso.
+    users:
+      edit_role: Alterar Papel
+      show:
+        user: Usuário
+      index:
+        listing_users: Lista de Usuários
+      update:
+        success: Usuário foi atualizado com sucesso.
+        error: Não foi possível atualizar o usuário.
+      destroy:
+        success: Usuário foi excluido com sucesso.
+      show:
+        access_denied: Acesso negado.
   welcome:
     index:
       posted_by: Postado por

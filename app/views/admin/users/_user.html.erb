@@ -1,0 +1,12 @@
+<td>
+  <%= link_to user.email, admin_user_path(user) %>
+</td>
+<td>
+  <%= form_for([:admin, user]) do |f| %>
+    <%= f.select(:role, Role.all.map {|role| [role.name.titleize,role.name]}, selected: user.role.name ) %>
+    <%= f.submit t('admin.users.edit_role'), class: 'btn btn-primary' %>
+  <% end %>
+</td>
+<td>
+  <%= link_to(t('crud.destroy'), admin_user_path(user), :data => { :confirm => t('crud.confirm') }, :method => :delete, :class => 'button-xs') unless user == current_user %>
+</td>
