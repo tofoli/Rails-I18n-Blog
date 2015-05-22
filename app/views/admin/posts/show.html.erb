@@ -1,8 +1,27 @@
-<h1><%= t('.visualize') %></h1>
+<div style="max-width: 800px" class="center-block">
+    <h1><%= t('.visualize') %></h1>
 
-<p id="notice"><%= notice %></p>
+    <%= render 'form', readonly: true %>
 
-<%= render 'form', readonly: true %>
+    <h1><%= t('.comments') %></h1>
+    <% @post.comments.each do |comment| %>
+        <hr>
+        <% @comment = comment %>
 
-<%= link_to t('crud.edit'), edit_admin_post_path(@post), class: 'btn btn-primary' %>
-<%= link_to t('crud.back'), admin_posts_path, class: 'btn btn-default' %>
+        <%= render template: 'comments/show' %>
+    <% end %>
+
+    <h1><%= t('.new_comment') %></h1>
+    <hr>
+    <% @comment = @post.comments.new %>
+    <%= render template: 'comments/new' %>
+
+    <div style="margin-top: 10px">
+      <% if current_user && current_user.editor? %>
+          <%= link_to t('crud.edit'), edit_admin_post_path(@post), class: 'btn btn-primary' %>
+          <%= link_to t('crud.back'), admin_posts_path, class: 'btn btn-default' %>
+      <% else %>
+          <%= link_to t('crud.back'), root_path, class: 'btn btn-default' %>
+      <% end %>
+    </div>
+</div>

@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
 
   belongs_to :role
 
+  validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  validates_uniqueness_of :email
+
   before_create :set_default_role
 
   def admin?
@@ -13,7 +16,7 @@ class User < ActiveRecord::Base
   end
 
   def editor?
-    self.role.editor?
+    self.role.editor? || self.admin?
   end
 
   def role=(role)

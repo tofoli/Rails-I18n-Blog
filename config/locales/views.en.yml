@@ -17,6 +17,9 @@ en:
     created_at: Created At
   admin:
     posts:
+      errors:
+        one: "1 error prohibited this post from being saved:"
+        other: "%{count} errors prohibited this post from being saved:"
       index:
         listing: Listing Posts
       edit:
@@ -25,6 +28,8 @@ en:
         new: New Post
       show:
         visualize: Vizualize Post
+        comments: Comments
+        new_comment: Write a comment
       create:
         success: Post was successfully created.
       update:
@@ -48,4 +53,10 @@ en:
     index:
       posted_by: Posted By
       "on": on
-      learn_more: Learn More...
+      learn_more: Learn More...   %{comments_count}
+  comments:
+    errors:
+      one: "1 error prohibited this comment from being saved:"
+      other: "%{count} errors prohibited this comment from being saved:"
+    create:
+      success: Comment was successfully created.

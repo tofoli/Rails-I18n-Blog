@@ -5,6 +5,7 @@ pt-BR:
       user: Usuário
       role: Papel
       post: Publicação
+      comment: Comentário
     attributes:
       user:
         email: E-mail
@@ -22,3 +23,7 @@ pt-BR:
         active: Ativo
         user: Usuário
         created_at: Criando Em
+      comment:
+        email: Email
+        comment: Comentário
+        post: Publicação

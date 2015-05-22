@@ -12,12 +12,12 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user_editor!
     authenticate_user!
-    redirect_to root_path, alert: 'Somente editores ou administradores podem acessar' unless current_user.admin? || current_user.editor?
+    redirect_to :back, alert: 'Somente editores ou administradores podem acessar' unless current_user.editor?
   end
 
   def authenticate_user_admin!
     authenticate_user!
-    redirect_to root_path, alert: 'Somente administradores podem acessar' unless current_user.admin?
+    redirect_to :back, alert: 'Somente administradores podem acessar' unless current_user.admin?
   end
 
   private

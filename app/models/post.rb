@@ -1,6 +1,11 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  has_many :comments
+
   validates_presence_of :user, :title, :summary, :content
+  validates_length_of :title, in: 5..255
+  validates_length_of :summary, in: 30..500
+  validates_length_of :content, in: 50..500
 
   scope :active, -> { where(active: true) }
   scope :from_user, ->(user) { joins(:user).where(user_id: user.id) }

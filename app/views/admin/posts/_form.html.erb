@@ -1,8 +1,8 @@
 <% readonly ||= false %>
 <%= form_for([:admin, @post]) do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <div id="error_explanation" class="alert alert-danger">
+      <h4><%= t('admin.posts.errors', count: @post.errors.count) %></h4>
 
       <ul>
       <% @post.errors.full_messages.each do |message| %>
@@ -24,7 +24,7 @@
     <%= f.label :content %><br>
     <%= f.text_area :content, class: 'form-control', readonly: readonly %>
   </div>
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div class="form-group">
       <%= f.label :active %><br>
       <%= f.check_box :active, disabled: readonly %>

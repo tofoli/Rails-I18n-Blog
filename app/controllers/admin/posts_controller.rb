@@ -2,6 +2,7 @@ class Admin::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user_admin!, only: [:destroy]
   before_action :authenticate_user_editor!, only: [:index, :edit, :new]
+  skip_before_action :authenticate_user!, only: :show
 
   # GET /posts
   # GET /posts.json

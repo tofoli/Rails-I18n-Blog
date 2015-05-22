@@ -1,0 +1,39 @@
+<%
+  readonly ||= false
+  @comment.email = current_user.email if current_user && @comment.new_record?
+%>
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h4><%= t('comments.errors', count: @comment.errors.count) %></h4>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="pull-left">
+      <%= f.label :email %>
+    </div>
+    <div class="pull-right">
+      <%= l(@comment.created_at) if readonly %>
+    </div><br>
+    <%= f.text_field :email, class: 'form-control', readonly: readonly %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment, class: 'form-control', readonly: readonly %>
+  </div>
+  <%= f.hidden_field :post_id %>
+
+  <% unless readonly %>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-success' %>
+    </div>
+  <% end %>
+<% end %>

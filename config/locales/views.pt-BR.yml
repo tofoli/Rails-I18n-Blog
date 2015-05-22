@@ -17,6 +17,9 @@ pt-BR:
     created_at: Criando Em
   admin:
     posts:
+      errors:
+        one: "1 erro proibido esta publicação de ser salva:"
+        other: "%{count} erros proibiram esta publicação de ser salva:"
       index:
         listing: Lista de Publicações
       edit:
@@ -25,6 +28,8 @@ pt-BR:
         new: Nova Publicação
       show:
         visualize: Vizualizar Publicação
+        comments: Comentários
+        new_comment: Escreva um comentário
       create:
         success: Publicação foi criada com sucesso.
       update:
@@ -48,5 +53,10 @@ pt-BR:
     index:
       posted_by: Postado por
       "on": em
-      learn_more: Saiba Mais...
-
+      learn_more: Saiba Mais...   %{comments_count}
+  comments:
+    errors:
+      one: "1 erro proibido este comentário de ser salvo:"
+      other: "%{count} erros proibiram este comentário de ser salvo:"
+    create:
+      success: Comentário foi criado com sucesso.
